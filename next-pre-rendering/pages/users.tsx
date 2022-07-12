@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import User from '../components/User';
 import { IUser } from '../interfaces';
 
@@ -6,7 +6,7 @@ interface UsersProps {
   users: IUser[];
 }
 
-const Users: React.FC<UsersProps> = ({ users }) => (
+const Users: NextPage<UsersProps> = ({ users }) => (
   <div>
     <h1>Users</h1>
     <ul>

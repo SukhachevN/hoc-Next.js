@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next';
+import { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
 import { IPost } from '../../interfaces';
 
@@ -6,7 +6,7 @@ interface PostListProps {
   posts: IPost[];
 }
 
-const PostList: React.FC<PostListProps> = ({ posts = [] }) => (
+const PostList: NextPage<PostListProps> = ({ posts = [] }) => (
   <>
     <h1>Post List</h1>
     <ul>
