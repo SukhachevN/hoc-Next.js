@@ -7,6 +7,13 @@ const nextConfig = withImages({
   images: {
     disableStaticImages: true,
   },
+  redirects: async () => [
+    {
+      source: '/about',
+      destination: '/',
+      permanent: false,
+    },
+  ],
 });
 
 module.exports = nextConfig;
